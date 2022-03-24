@@ -12,7 +12,7 @@ feedback: true
 - Наш [WhatsApp](https://wa.me/{{ envs.contacts.wa }})
 
 - Наши адреса: 
-{% for item in envs.contacts.addresses %}
+{% for item in addresses %}
 {% if item.mapLink %}
 	- [{{ item.address }}]({{ item.mapLink }})
 {% else %}
