@@ -12,5 +12,10 @@ feedback: true
 - Наш [WhatsApp](https://wa.me/{{ envs.contacts.wa }})
 
 - Наши адреса: 
-  - [г. Москва, ул. Николоямская, д. 52, с 1, вход 1, этаж 2, офис 204](https://2gis.ru/moscow/branches/70000001045547378/firm/70000001045547379/37.663019%2C55.746849?m=37.55448%2C55.825568%2F11.12)
-  - [г. Москва, ул. Соколово-Мещерская, д. 25, этаж 2, офис 35.](https://2gis.ru/moscow/branches/70000001045547378/firm/70000001045547935/37.384917%2C55.904066?m=37.55448%2C55.825568%2F11.12)
+{% for item in envs.contacts.addresses %}
+{% if item.mapLink %}
+	- [{{ item.address }}]({{ item.mapLink }})
+{% else %}
+	- {{ item.address }}
+{% endif %}
+{% endfor %}
