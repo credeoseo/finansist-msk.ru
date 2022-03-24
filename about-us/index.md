@@ -14,9 +14,9 @@ feedback: true
 Работаем по адресу:
 {% for item in envs.contacts.addresses %}
 {% if item.mapLink %}
-	- [{{ item.address }}]({{ item.mapLink }})
+  - [{{ item.address }}]({{ item.mapLink }})
 {% else %}
-	- {{ item.address }}
+  - {{ item.address }}
 {% endif %}
 {% endfor %}
 
