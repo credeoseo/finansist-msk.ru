@@ -2,3 +2,7 @@ Sitemap: https://finansist-msk.ru/sitemap.xml
 
 User-agent: *
 
+
+Disallow: /dengi-pod-pts/
+
+
